@@ -1,2 +1,2 @@
-# No SoC-level XNU patches yet. SM8550's two patches are written against its own
-# behaviour and have not been shown to apply to SM8475. An empty series is valid.
+native-smp-secondary.patch
+platform-power.patch
