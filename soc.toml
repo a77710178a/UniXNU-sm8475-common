@@ -1,0 +1,15 @@
+"schema_version" = 2
+
+["soc"]
+"name" = "sm8475"
+"description" = "Qualcomm SM8475 (Snapdragon 8+ Gen 1, cape / taro)"
+# The mainline tree the shared hardware description is cross-checked against. Values in
+# dts/sm8475.dtsi were additionally verified on the phone itself (see the header there).
+"source_repository" = "https://github.com/torvalds/linux"
+"source_revision" = "sm8475.dtsi-derived"
+
+["components"]
+# ArmCpu / ArmDTPlatform are the same architectural providers SM8550 uses. No GPU component is
+# listed yet: UniXNU carries Adreno740 (SM8550), and an Adreno730 provider has not been written.
+# Until one exists the GPU stays out of the component list and its nodes stay status = "disabled".
+"include" = ["ArmCpu", "ArmDTPlatform"]
